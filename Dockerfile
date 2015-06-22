@@ -44,6 +44,7 @@ RUN echo "fr_FR.UTF-8 UTF-8" > /etc/locale.gen
 RUN locale-gen
 RUN dpkg-reconfigure locales
 
+# ------------------- EN COURS ---------------------
 # VOLUME XiVO (DB+DATA) /MonHote/path:/monconteneur/path
 # VOLUME DB
 #VOLUME /xivo/xivo1/db:/varmydb
