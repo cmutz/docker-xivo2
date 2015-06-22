@@ -44,6 +44,32 @@ RUN echo "fr_FR.UTF-8 UTF-8" > /etc/locale.gen
 RUN locale-gen
 RUN dpkg-reconfigure locales
 
+# VOLUME XiVO (DB+DATA) /MonHote/path:/monconteneur/path
+# VOLUME DB
+#VOLUME /xivo/xivo1/db:/varmydb
+# VOLUME Data :
+#VOLUME /xivo/xivo1/etc/asterisk:/etc/asterisk
+#VOLUME /xivo/xivo1/etc/dahdi:/etc/dahdi
+#VOLUME /xivo/xivo1/etc/dhcp:/etc/dhcp
+#VOLUME /xivo/xivo1/etc/hostname:/etc/hostname
+#VOLUME /xivo/xivo1/etc/hosts:/etc/hosts
+#VOLUME /xivo/xivo1/etc/network/interfaces:/etc/network/interfaces
+#VOLUME /xivo/xivo1/etc/ntp.conf:/etc/ntp.conf
+#VOLUME /xivo/xivo1/etc/xivo:/etc/xivo
+#VOLUME /xivo/xivo1/etc/resolv.conf:/etc/resolv.conf
+#VOLUME /xivo/xivo1/etc/wanpipe:/etc/wanpipe
+#VOLUME /xivo/xivo1/var/lib/asterisk/:/var/lib/asterisk/
+#VOLUME /xivo/xivo1/var/lib/xivo/:/var/lib/xivo/
+#VOLUME /xivo/xivo1/var/lib/xivo-provd:/var/lib/xivo-provd
+#VOLUME /xivo/xivo1/var/log/asterisk/:/var/log/asterisk/
+#VOLUME /xivo/xivo1/var/spool/asterisk/:/var/spool/asterisk/
+#VOLUME /xivo/xivo1/var/backups/xivo:/var/backups/xivo
+#VOLUME /xivo/xivo1/var/lib/xivo/sounds:/var/lib/xivo/sounds
+#VOLUME /xivo/xivo1/var/lib/asterisk/sounds/custom:/var/lib/asterisk/sounds/custom
+#VOLUME /xivo/xivo1/var/lib/asterisk/moh:/var/lib/asterisk/moh
+#VOLUME /xivo/xivo1/var/spool/asterisk/voicemail:/var/spool/asterisk/voicemail
+#VOLUME /xivo/xivo1/var/spool/asterisk/monitor:/var/spool/asterisk/monitor
+
 # Install XiVO
 RUN /root/xivo_install_current.sh
 
@@ -59,5 +85,4 @@ RUN apt-get clean
 RUN rm /root/xivo_install_current.sh
 
 EXPOSE 22 80 443 5003 5060 50051
-#VOLUME /MonHote/path:/monconteneur/path
 CMD ["/root/xivo-service", "loop"]
