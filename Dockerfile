@@ -59,4 +59,5 @@ RUN apt-get clean
 RUN rm /root/xivo_install_current.sh
 
 EXPOSE 22 80 443 5003 5060 50051
+#VOLUME /MonHote/path:/monconteneur/path
 CMD ["/root/xivo-service", "loop"]
