@@ -70,6 +70,7 @@ RUN dpkg-reconfigure locales
 #VOLUME /xivo/xivo1/var/lib/asterisk/moh:/var/lib/asterisk/moh
 #VOLUME /xivo/xivo1/var/spool/asterisk/voicemail:/var/spool/asterisk/voicemail
 #VOLUME /xivo/xivo1/var/spool/asterisk/monitor:/var/spool/asterisk/monitor
+# ------------------- EN COURS ---------------------
 
 # Install XiVO
 RUN /root/xivo_install_current.sh
