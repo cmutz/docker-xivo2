@@ -5,7 +5,6 @@ MAINTAINER Florian Dufour "flodelo69@gmail.com"
 # Set ENV
 ENV DEBIAN_FRONTEND noninteractive
 ENV LANG fr_FR.UTF-8
-ENV LC_ALL fr_FR.UTF-8
 ENV HOME /root
 
 # Add necessary files
