@@ -1,5 +1,5 @@
 # XiVO docker installation
-FROM debian:7.8
+FROM debian:latest
 MAINTAINER Florian Dufour "flodelo69@gmail.com"
 
 # Set ENV
