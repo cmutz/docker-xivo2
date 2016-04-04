@@ -17,7 +17,7 @@ RUN chmod +x /root/xivo_install_current.sh
 RUN chmod +x /root/xivo-service
 
 # Add non-free repo
-RUN echo "deb http://http.debian.net/debian wheezy non-free" >> /etc/apt/sources.list
+RUN echo "deb http://http.debian.net/debian jessie non-free" >> /etc/apt/sources.list
 
 # Update repo
 RUN apt-get -qq update
